@@ -10,6 +10,7 @@ import Header from "./components/header/header.component";
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import {auth,createUserProfileDocument} from './firebase/firebase.utils'
 import {selectCurrentUser} from './redux/user/user.selectors'
+import CheckoutApage from './pages/checkout/checkout.component'
 
 function App({setCurrentUser,currentUser}) {
 
@@ -42,6 +43,7 @@ function App({setCurrentUser,currentUser}) {
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
         <Route path="/shop" component={ShopPage}></Route>
+        <Route exact path="/checkout" component={CheckoutApage}></Route>
         <Route exact path="/signin" render={()=>currentUser ? (<Redirect to='/'/>) : (<SignInAndSignUpPage/>)}></Route>
       </Switch>
     </div>

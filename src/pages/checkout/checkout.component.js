@@ -1,6 +1,7 @@
 import React from "react";
 import "./checkout.styles.scss";
 import { useSelector } from "react-redux";
+
 import {
   selectCartItems,
   selectCartTotal
